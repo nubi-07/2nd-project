@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hmart-One</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .logo1 {
+            color: #266bf9;
+            font-size: 40px;
+            /* right: */
+            padding: 0px 0px 0px 62px;
+
+        }
+
+        .logo1 span {
+            color: #fff;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            /* margin: 0px 0px 11px 0px; */
+            padding: 8px 40px 8px 60px;
+            /* background-color: rgb(39, 35, 35); */
+        }
+
+        .navbar h4 {
+            display: flex;
+            justify-content: flex-start;
+            color: lightgray;
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            font-style: normal;
+            /* margin: 0px 0px 0px 62px; */
+
+        }
+
+        .navbar li {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            list-style: none;
+
+        }
+
+        .navbar li p {
+            color: lightgrey;
+
+
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: lightgray;
+        }
+
+        .navbar li a:hover {
+            color: #266bf9;
+        }
+
+        .fa-solid {
+            color: #266bf9;
+        }
+
+        .fa-regular {
+            color: #266bf9;
+        }
+
+        .fa-user {
+            color: #266bf9;
+        }
+
+        .fa-solid,
+        .fas {
+            font-weight: 900;
+        }
+
+        .bar {
+
+            color: lightgray;
+
+        }
+
+        .line {
+            width: 100%;
+            /* size: 0.5px; */
+            color: silver
+        }
+
+        .logobar {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0px 20px 0px;
+            padding: 0px 0px 0px 62px;
+        }
+
+        .searchbar {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .search {
+            display: flex;
+            height: 3.6em;
+            width: 29em;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border: none;
+            outline: none;
+            padding: 0px 0px 0px 14px;
+
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #266bf9;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            height: 48px;
+            width: 66px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .fa-magnifying-glass {
+            color: white;
+            font-size: 21px;
+        }
+
+        .fa-heart {
+
+            float: right;
+            font-size: 26px;
+            color: white;
+            /* padding: 0px 39px 0px 21px; */
+            padding: 0 50px 0 0;
+
+        }
+
+        .fa-bag-shopping {
+            float: right;
+            padding: 0 25px 0 0;
+            font-size: 26px;
+            color: white;
+        }
+
+        .icons {
+            display: flex;
+            /* margin: -22px 0px 0px 58px;
+      */
+            align-items: center;
+        }
+
+        .icons i:hover {
+            color: #266bf9;
+        }
+
+        .background {
+            background-color: rgb(39, 35, 35);
+        }
+
+
+        .menu_bar {
+            background-color: #266bf9;
+            position: relative;
+            /* left: 4em; */
+            height: 53px;
+            margin: auto;
+            width: 92%;
+            display: flex;
+            align-items: center;
+            /* padding: 0px 0px 0px 156px; */
+            justify-content: center;
+            z-index: 1;
+            /* position: sticky; */
+        }
+
+
+
+        .menu_bar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu_bar ul li {
+            padding: 15px 30px;
+
+        }
+
+        .menu_bar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            position: relative;
+        }
+
+        .home_dropdown {
+            display: none;
+            position: absolute;
+            top: 0;
+        }
+
+        .menu_bar ul li:hover .home_dropdown {
+            display: block;
+            position: absolute;
+            top: 3.3em;
+            background-color: white;
+        }
+
+        .home_dropdown ul {
+            display: block;
+            margin: 10px;
+
+        }
+
+        .home_dropdown ul li {
+            width: 150px;
+            padding: 10 px;
+        }
+
+        .home_dropdown ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 15px;
+            position: relative;
+        }
+
+        .home_dropdown2 {
+            display: block;
+            position: absolute;
+            top: 3em;
+            left: 0em;
+            width: 100%;
+            background-color: white
+        }
+
+        .inner h1 {
+            color: black;
+            font-size: large;
+            padding: 28px;
+        }
+
+        .other h1 {
+            color: black;
+            font-size: large;
+            padding: 28px;
+        }
+
+        .related h1 {
+            color: black;
+            font-size: large;
+            padding: 28px;
+        }
+
+        .home_dropdown2 {
+            display: none;
+        }
+
+        .home_dropdown2 ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 15px;
+            position: relative;
+        }
+
+        .menu_bar ul li:hover .home_dropdown2 {
+            display: block;
+            position: absolute;
+            top: 3.3em;
+            background-color: white;
+        }
+
+        .img {
+            padding: 25px 0px 0px 25px;
+        }
+
+        .home_dropdown3 {
+            display: block;
+            position: absolute;
+            top: 3em;
+            left: 0em;
+            width: 100%;
+            background-color: white
+        }
+
+        .shop_page h1 {
+            color: black;
+            font-size: large;
+            padding: 28px;
+        }
+
+        .product h1 {
+            color: black;
+            font-size: large;
+            padding: 28px;
+        }
+
+        .single h1 {
+            color: black;
+            font-size: large;
+            padding: 28px;
+        }
+
+        .single2 h1 {
+            color: black;
+            font-size: large;
+            padding: 28px;
+        }
+
+        .home_dropdown3 {
+            display: none;
+        }
+
+        .home_dropdown3 ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 15px;
+            position: relative;
+        }
+
+        .menu_bar ul li:hover .home_dropdown3 {
+            display: block;
+            position: absolute;
+            top: 3.3em;
+            background-color: white;
+        }
+
+        .home_dropdown4 {
+            display: block;
+            position: absolute;
+            top: 3em;
+            left: 39em;
+            width: 20%;
+            background-color: white;
+
+        }
+
+        .grid {
+            color: black;
+            font-size: large;
+
+        }
+
+        .home_dropdown4 {
+            display: none;
+        }
+
+        .home_dropdown4 ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 15px;
+            position: relative;
+        }
+
+        .menu_bar ul li:hover .home_dropdown4 {
+            display: block;
+            position: absolute;
+            top: 3.3em;
+            background-color: white;
+
+        }
+
+        .fa-angle-right {
+            padding: 0px 0px 0px 6px;
+        }
+
+        .fa-angle-down {
+            color: white;
+        }
+
+        .word {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.5;
+            justify-content: center;
+            /* align-items: center; */
+            color: #fff;
+            font-family: system-ui;
+            font-weight: bold;
+            font-size: 28px;
+            animation-name: fade-up;
+            animation-duration: 2s;
+            animation-delay: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+
+
+        .animation-part2 {
+            animation-name: fade-up;
+            animation-duration: 2s;
+            animation-delay: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes fade-up {
+            0% {
+                opacity: 0;
+                transform: translateY(80px) scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(7px) scale(1);
+            }
+        }
+
+        .animation-part {
+            background: url(hero-bg-1.jpg) no-repeat;
+            width: 100%;
+            height: 40em;
+            background-size: cover;
+            margin: 0 0 80px 0;
+        }
+
+        .animation-part1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 40px 0 0 0;
+        }
+
+        .shop-devices {
+            border: 2px solid white;
+            padding: 11px;
+            background: transparent;
+            border-radius: 10px;
+            color: white;
+            font-size: large;
+            margin: 31px 0 0 0;
+        }
+
+        .shop-devices a {
+            text-decoration: none;
+        }
+
+        .shop-devices:hover {
+            background-color: #266bf9;
+            border: none;
+            cursor: pointer;
+        }
+
+        .banner1 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            /* background-color: white ;
+            background-size: cover; */
+            width: 97%;
+            height: auto;
+            /* margin: 5em 0 89px 0; */
+            padding: 50px 0 0 0;
+        }
+
+        .banner1 img {
+            transform: scale(0.9);
+        }
+
+        .banner1 img:hover {
+            /* transform: rotate(2deg); */
+            transform: scale(1);
+
+        }
+
+        .banner1 p {
+            font-size: xx-large;
+            color: #a19696;
+            font-weight: bold;
+        }
+
+        .banner1 h2 {
+            color: black;
+        }
+
+        .watches {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #f2f8fd;
+            line-height: 1.7;
+            width: 42%;
+
+        }
+
+        .watches p {
+            padding: 0px 0 0 57px;
+        }
+
+        .watches h2 {
+            padding: 0px 0 0 57px;
+        }
+
+        .both {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .tws {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #f2f8fd;
+            line-height: 1.7;
+        }
+
+
+        .tws {
+            display: flex;
+            flex-direction: row;
+            width: 97%;
+            height: 16em;
+            padding: 0 0 0 22px;
+
+        }
+
+        .tws-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tws h3 {
+            color: #999da0;
+            font-size: 36px;
+            line-height: 46px;
+            font-weight: 600;
+            margin: 0 0 12px;
+        }
+
+        .tws span {
+            color: #161616;
+            font-size: 24px;
+            font-weight: bolder;
+            margin: 0 0 0px
+        }
+
+        .smartphone {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            background-color: #f2f8fd;
+            margin: 28px 0px 0px 0px;
+            height: 15.2em;
+            padding: 0px 0 0 25px;
+            line-height: 1.7;
+            width: 97%;
+        }
+
+
+        .product-area {
+            margin: auto;
+            margin-top: 9%;
+            width: 95%;
+        }
+
+        .tab-buttons {
+            display: flex;
+            flex-direction: row;
+            margin: 0px 0 0 34px;
+            width: 100%;
+            /* padding: 70px 0 0 70px; */
+        }
+
+        .tab-button1 {
+            margin: 0 12px 0 12px;
+            padding: 13px 16px;
+            background-color: transparent;
+            border-radius: 10px;
+            border: 1px solid lightgray;
+            color: gray;
+            font-size: 18px;
+            font-weight: bolder;
+            width: 12%;
+            font-family: sans-serif;
+        }
+
+        .tab-button2 {
+            /* margin:0 0 0 12px; */
+            display: flex;
+            justify-content: center;
+            padding: 15px 28px;
+            background-color: #266bf9;
+            border-radius: 10px;
+            color: white;
+            font-size: large;
+            width: 11%;
+            font-family: sans-serif;
+        }
+
+        .tab-button3 {
+            margin: 0 12px 0 12px;
+            padding: 14px 36px;
+            background-color: transparent;
+            border-radius: 10px;
+            border: 1px solid lightgray;
+            color: gray;
+            font-size: 18px;
+            font-weight: bolder;
+            width: 12%;
+            font-family: sans-serif;
+        }
+
+        .products-8 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 98%;
+            margin: 35px 32px 70px 0px;
+        }
+
+
+
+        .modern-smartphone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            width: 21%;
+            transform: scale(0.9);
+        }
+
+        .modern-smartphone:hover {
+            transform: scale(1.1);
+        }
+
+        .modern-smartphone-text1 {
+            color: gray;
+            font-size: medium;
+            font-family: sans-serif;
+        }
+
+        .modern-smartphone-text2 {
+            color: black;
+            font-size: large;
+            font-family: sans-serif;
+        }
+
+        .modern-smartphone-text3 {
+            color: gray;
+            font-size: medium;
+            font-family: sans-serif;
+        }
+
+        .fashion {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background: url(fashion-bg2.jpg) no-repeat;
+            width: 100%;
+            height: 28em;
+            margin: 0 0 70px 0;
+            background-size: cover;
+        }
+
+        .fashion h1 {
+            font-weight: 100;
+            font-size: xxx-large;
+            color: white;
+        }
+
+        .fashion p {
+            font-weight: bold;
+            color: white;
+            font-size: 61px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            line-height: 1.5;
+        }
+
+        .button-shop {
+
+            border: 2px solid white;
+            padding: 11px;
+            background: transparent;
+            border-radius: 10px;
+            color: white;
+            font-size: large;
+
+        }
+
+        .button-shop a {
+            text-decoration: none;
+            /* outline: none; */
+        }
+
+        .button-shop:hover {
+            background-color: #266bf9;
+            border: none;
+            cursor: pointer;
+        }
+
+        .Featured-products {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 30px 0;
+        }
+
+
+        .Featured-offer h1 {
+            line-height: 2;
+            margin: 45px 0 0 0;
+            padding: 30px 0 0 0;
+            display: flex;
+            justify-content: center;
+            font-size: xxx-large;
+            color: black;
+        }
+
+        .Featured-offer span {
+            display: flex;
+            justify-content: center;
+            color: gray;
+            font-size: x-large;
+        }
+
+        .Featured-product1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 2px solid lightgray;
+            width: 39%;
+            height: 47em;
+            padding: 24px;
+            border-radius: 20px;
+
+        }
+
+        .headphones-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 2;
+        }
+
+        .headphones-text h2 {
+            color: black;
+            font-size: xx-large;
+        }
+
+        .headphones-text p {
+            color: gray;
+            font-size: xx-large;
+        }
+
+        .headphones-shopnow-button {
+            margin: 1px 0px;
+            padding: 13px 33px;
+            background-color: #266bf9;
+            border-radius: 10px;
+            color: white;
+            font-size: large;
+            width: 33%;
+        }
+
+        .headphones-shopnow-button:hover {
+            cursor: pointer;
+        }
+
+        .Featured-product2 {
+            display: flex;
+            flex-direction: row;
+            border: 2px solid lightgray;
+            width: 100%;
+            /* margin: 0 0 53px 0; */
+
+            border-radius: 20px;
+        }
+
+        .watch-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 0 0 0 31px;
+            /* align-items: center; */
+        }
+
+        .watch-text h3 {
+            font-size: 25px;
+            line-height: 2;
+        }
+
+        .watch-text p {
+            font-size: x-large;
+            color: gray;
+        }
+
+
+        .features ul li {
+            font-size: 21px;
+            line-height: 2;
+            margin: 0 0 0 21px;
+        }
+
+        .Featured-product3 {
+            display: flex;
+            flex-direction: row;
+            border: 2px solid lightgray;
+            width: 100%;
+            margin: 0 0 53px 0;
+            border-radius: 20px;
+        }
+
+        .phone-text h4 {
+            font-size: 25px;
+            line-height: 2;
+        }
+
+        .phone-text p {
+            font-size: x-large;
+            color: gray;
+        }
+
+        .watch-phone {
+            display: flex;
+            flex-direction: column;
+            gap: 55px;
+        }
+
+        .phone-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 0 0 0 28px;
+        }
+
+        .phone-img {
+            width: 46%;
+            /* padding: 0 0 0 29px; */
+        }
+
+        .feedback {
+            /* display: flex;
+            flex-direction: row;
+            justify-content: space-evenly; */
+            background-color: #f2f8fd;
+        }
+
+        .feedback h1 {
+            line-height: 2;
+            margin: 45px 0 0 0;
+            padding: 30px 0 0 0;
+            display: flex;
+            justify-content: center;
+            font-size: xxx-large;
+            color: black;
+        }
+
+        .passages {
+            display: flex;
+            justify-content: center;
+            color: gray;
+            font-size: x-large;
+        }
+
+        .part1 {
+            padding: 34px 0 30px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .quotes {
+
+            color: rgb(32, 31, 31);
+            padding: 0 0 0 0;
+        }
+
+        .quotes p {
+            font-style: italic;
+            /* position: absolute;
+            top: 13px; */
+            padding: 0 0 0px 29px;
+            font-size: large;
+            line-height: 2;
+
+        }
+
+        .client {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .client h3 {
+            color: #266bf9;
+            margin: 21px 0 8px 0;
+            padding: 0 0 0 15px;
+        }
+
+        .client span {
+            color: gray;
+            padding: 0 0px 0 15px;
+
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            background-color: #f2f8fd;
+            width: 100%;
+            margin: 60px 0 0 0;
+        }
+
+        .logo2 {
+            color: #266bf9;
+            font-size: 40px;
+            line-height: 2;
+        }
+
+        .logo2 span {
+            color: black;
+        }
+
+        .hmart p {
+            line-height: 1.8;
+        }
+
+        /* .services {
+            /* line-height: 2; */
+        /* } */
+
+        .bottom i {
+            color: white;
+            font-size: 30px;
+            /* padding: 0px 30px; */
+            font-size: 20px;
+            margin: 14px 0px 0px 0px;
+            padding: 4px 12px 3px 17px;
+            border: 2px solid grey;
+            background-color: grey;
+            border-radius: 5px;
+        }
+
+        .bottom i:hover {
+            color: #266bf9;
+        }
+
+        .bottom a {
+            color: black;
+            text-decoration: none;
+            line-height: 2.6;
+        }
+
+        .bottom a:hover {
+            color: #266bf9;
+        }
+
+        .contact p {
+            line-height: 2.8;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 30px 64px 30px 59px;
+            background-color: #e2f2ff;
+            color: grey;
+            width: 100%;
+        }
+
+        /* .fa-heart {
+            color: #266bf9;
+        } */
+
+        .footer-bottom a {
+            color: grey;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: #266bf9;
+        }
+
+        .main-brand {
+            border: 2px solid silver;
+            border-radius: 10px;
+            height: 15em;
+            padding: -3px 0;
+            /* margin: 80px 95px; */
+            margin: auto;
+            margin-top: 9%;
+            width: 80%;
+
+        }
+
+        .brands {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding: 80px 60px;
+            /* margin: 85px 0 0 0; */
+
+            /* width: calc(250px*8); */
+            /* overflow: hidden; */
+            white-space: nowrap;
+        }
+
+        .brands img {
+            filter: saturate(0%);
+            animation: scroll 40s linear infinite;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .brands span img {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            transition: .5s;
+        }
+
+        .brands:hover span {
+            top: 0;
+        }
+
+        .brands:hover span img {
+            top: 0;
+            filter: saturate(100%);
+            cursor: pointer;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                /* transform: translateX(calc(-250px*4)); */
+            }
+        }
+
+        /* .blog1 h1 {
+            width: 100;
+        } */
+
+        .blog1 h1 {
+            line-height: 2;
+            padding: 30px 0 0 0;
+            display: flex;
+            justify-content: center;
+            font-size: xxx-large;
+            color: black;
+        }
+
+        .blog1 span {
+            display: flex;
+            justify-content: center;
+            color: gray;
+            font-size: x-large;
+            margin: 0 0 56px 0;
+        }
+
+        .smart-product {
+            display: flex;
+            flex-direction: row;
+            margin: 0px 0px 19px 31px;
+        }
+
+        .smart {
+            display: flex;
+            flex-direction: row;
+            gap: 26px;
+            /* justify-content: space-evenly; */
+        }
+
+        .blog-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 45%;
+            /* margin: 0 0 0 25px; */
+        }
+
+        .blog-icons {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fa-calendar-days {
+            color: #266bf9;
+        }
+
+        .fa-user-large {
+            color: #266bf9;
+        }
+
+        .blog-heading {
+            color: black;
+        }
+
+        .blog-lorem {
+            font-size: large;
+            line-height: 2;
+        }
+
+        .blog-button {
+            margin: 1px 0px;
+            border: 2px solid white;
+            padding: 13px 23px;
+            background-color: gray;
+            border-radius: 10px;
+            color: white;
+            font-size: large;
+            width: 50%;
+        }
+
+        .blog-button:hover {
+            background-color: #266bf9;
+            cursor: pointer;
+        }
+
+        @media only screen and (min-width: 1200px) {
+
+            /* .navbar h4 {
+                padding: 0 11em;
+            } */
+
+
+
+            .logobar {
+                justify-content: space-evenly;
+                padding: 0px 15px 0px 0px;
+            }
+
+            .fa-bag-shopping {
+                padding: 0 15px 0 0px;
+            }
+
+            .logo1 {
+                padding: 0;
+            }
+/* 
+            .home_dropdown4 {
+                width: 10em;
+                margin-left: -10em;
+            } */
+
+            .word h4 {
+                font-size: 18px;
+            }
+
+            .word h1 {
+                font-size: 45px;
+            }
+
+            .animation-part {
+                height: 30em;
+            }
+
+            .animation-part2 img {
+                width: 22em;
+            }
+
+            .banner1 {
+                flex-direction: row;
+
+
+            }
+
+            .watches {
+                width: 44%;
+                margin-bottom: 24px;
+                height: 39em;
+            }
+
+            .watches img {
+                width: 28em;
+            }
+
+            .both {
+                width: 48%;
+            }
+
+            .tws {
+                width: 100%;
+                height: 19em;
+                padding: 30px 0 0px 22px;
+                margin: 0 0 25px 0;
+
+            }
+
+            .smartphone {
+                width: 100%;
+                height: 18.em;
+                padding: 0px 0 0 25px;
+            }
+
+            .smart-product {
+                flex-direction: row;
+                gap: 40px;
+            }
+
+            .tab-buttons {
+                flex-wrap: nowrap;
+                justify-content: center;
+                margin: 0;
+            }
+
+            .tab-button1 {
+                padding: 13px 13px;
+                margin: 0 12px 0 0;
+                width: 15%;
+            }
+
+            .tab-button2 {
+                width: 16%;
+                padding: 13px 13px;
+            }
+
+            .tab-button3 {
+                width: 16%;
+                padding: 13px 23px;
+            }
+
+            .modern-smartphone {
+                width: 32%;
+            }
+
+            .Featured-products {
+                flex-direction: row;
+                gap: 35px;
+            }
+
+            .Featured-product2 {
+                width: 100%;
+            }
+
+            .watch-img {
+                width: 16em;
+            }
+
+            .line1 {
+                height: 27em;
+            }
+
+            .phone-img {
+                width: 16em;
+            }
+
+            .watch-phone {
+                width: 50%;
+            }
+
+            .Featured-product3 {
+                width: 100%;
+            }
+
+            .headphones-shopnow-button {
+                width: 33%;
+            }
+
+            .Featured-product1 {
+                height: 52em;
+                width: 43%;
+            }
+
+            .brands {
+                padding: 73px 30px;
+                gap: 33px;
+            }
+
+            .bottom {
+                flex-direction: row;
+                gap: 35px;
+            }
+
+            .main-brand {
+                width: 97%;
+                height: 14em;
+            }
+
+            .blog-button {
+                width: 57%;
+            }
+
+            .smart {
+                justify-content: center;
+            }
+
+            .Featured-offer span {
+                font-size: 25px;
+            }
+
+            .line1 {
+                height: 24em;
+            }
+
+            .blog1 h1 {
+                font-size: 50px;
+            }
+
+            .blog1 span {
+                font-size: 25px;
+            }
+
+            .icons {
+                padding: 9px 0 0 0;
+            }
+
+            .fa-heart {
+                padding: 0;
+            }
+        }
+
+        @media only screen and (min-width:992px) and (max-width:1199px) {
+            /* .navbar h4 {
+                padding: 0 11em;
+            } */
+
+
+
+            .logobar {
+                justify-content: space-evenly;
+                padding: 0px 15px 0px 0px;
+            }
+
+            .fa-bag-shopping {
+                padding: 0 15px 0 0px;
+            }
+
+            .logo1 {
+                padding: 0;
+            }
+
+            /* .home_dropdown4 {
+                width: 10em;
+                margin-left: -10em;
+            } */
+
+            .word h4 {
+                font-size: 18px;
+            }
+
+            .word h1 {
+                font-size: 45px;
+            }
+
+            .animation-part {
+                height: 30em;
+            }
+
+            .animation-part2 img {
+                width: 22em;
+            }
+
+            .banner1 {
+                flex-direction: column;
+
+                justify-content: center;
+
+            }
+
+            .watches {
+                width: 67%;
+                margin-bottom: 24px;
+            }
+
+            .watches img {
+                width: 30em;
+            }
+
+            .tws {
+                width: 100%;
+            }
+
+            .smartphone {
+                width: 100%;
+            }
+
+            .smart-product {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .tab-buttons {
+                flex-wrap: nowrap;
+                justify-content: center;
+                margin: 0;
+            }
+
+            .tab-button1 {
+                padding: 13px 13px;
+                margin: 0 12px 0 0;
+                width: 15%;
+            }
+
+            .tab-button2 {
+                width: 16%;
+                padding: 13px 13px;
+            }
+
+            .tab-button3 {
+                width: 16%;
+                padding: 13px 23px;
+            }
+
+            .modern-smartphone {
+                width: 32%;
+            }
+
+            .Featured-products {
+                flex-direction: column;
+                gap: 58px;
+            }
+
+            .watch-img {
+                width: 28em;
+            }
+
+            .phone-img {
+                width: 28em;
+            }
+
+            .headphones-shopnow-button {
+                width: 16%;
+            }
+
+            .Featured-product1 {
+                height: 36em;
+                width: 100%;
+            }
+
+            .brands {
+                padding: 73px 30px;
+                gap: 33px;
+            }
+
+            .bottom {
+                flex-direction: row;
+                gap: 35px;
+            }
+
+            .main-brand {
+                width: 97%;
+                height: 14em;
+            }
+
+            .blog-button {
+                width: 34%;
+            }
+
+            .smart {
+                justify-content: center;
+            }
+
+            .Featured-offer span {
+                font-size: 25px;
+            }
+
+            .line1 {
+                height: 24em;
+            }
+
+            .blog1 h1 {
+                font-size: 50px;
+            }
+
+            .blog1 span {
+                font-size: 25px;
+            }
+
+            .icons {
+                padding: 9px 0 0 0;
+            }
+
+            .fa-heart {
+                padding: 0;
+            }
+        }
+
+
+        @media only screen and (min-width:768px) and (max-width:991px) {
+            .navbar h4 {
+                padding: 0 11em;
+            }
+
+            .navbar ul {
+                display: none;
+            }
+
+            .logobar {
+                justify-content: space-evenly;
+                padding: 0px 15px 0px 0px;
+            }
+
+            .fa-bag-shopping {
+                padding: 0 15px 0 0px;
+            }
+
+            .logo1 {
+                padding: 0;
+            }
+
+            .home_dropdown4 {
+                width: 10em;
+                margin-left: -5em;
+            }
+
+            .word h4 {
+                font-size: 18px;
+            }
+
+            .word h1 {
+                font-size: 45px;
+            }
+
+            .animation-part {
+                height: 30em;
+            }
+
+            .animation-part2 img {
+                width: 22em;
+            }
+
+            .banner1 {
+                flex-direction: column;
+
+                justify-content: center;
+
+            }
+
+            .watches {
+                width: 67%;
+                margin-bottom: 24px;
+            }
+
+            .watches img {
+                width: 30em;
+            }
+
+            .tws {
+                width: 100%;
+            }
+
+            .smartphone {
+                width: 100%;
+            }
+
+            .smart-product {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .tab-buttons {
+                flex-wrap: nowrap;
+                justify-content: center;
+                margin: 0;
+            }
+
+            .tab-button1 {
+                padding: 13px 13px;
+                margin: 0 12px 0 0;
+                width: 19%;
+            }
+
+            .tab-button2 {
+                width: 16%;
+                padding: 13px 13px;
+            }
+
+            .tab-button3 {
+                width: 16%;
+                padding: 13px 23px;
+            }
+
+            .modern-smartphone {
+                width: 32%;
+            }
+
+            .Featured-products {
+                flex-direction: column;
+                gap: 58px;
+            }
+
+            .watch-img {
+                width: 28em;
+            }
+
+            .phone-img {
+                width: 28em;
+            }
+
+            .headphones-shopnow-button {
+                width: 21%;
+            }
+
+            .Featured-product1 {
+                height: 36em;
+                width: 100%;
+            }
+
+            .brands {
+                padding: 44px 30px;
+                gap: 33px;
+            }
+
+            .bottom {
+                flex-direction: row;
+                gap: 35px;
+            }
+
+            .main-brand {
+                width: 97%;
+                height: 16em;
+            }
+
+            .blog-button {
+                width: 44%;
+            }
+
+            .smart {
+                justify-content: center;
+            }
+
+            .Featured-offer span {
+                font-size: 25px;
+            }
+
+            .line1 {
+                height: 24em;
+            }
+
+            .blog1 h1 {
+                font-size: 50px;
+            }
+
+            .blog1 span {
+                font-size: 25px;
+            }
+
+            .icons {
+                padding: 9px 0 0 0;
+            }
+
+            .fa-heart {
+                padding: 0;
+            }
+        }
+
+       
+        @media only screen and (max-width:767px) {
+            /* .navbar h4 {
+                padding: 0 8em;
+            } */
+
+            .navbar ul {
+                display: none;
+            }
+
+            .logobar {
+                gap: 35px;
+                justify-content: flex-start;
+                /* padding: 0 0 0 57px; */
+                margin-bottom: 0;
+            }
+
+            .search {
+                width: 17em;
+                height: 2.5em;
+            }
+
+            .btn {
+                width: 4em;
+                height: 2.5em;
+            }
+
+            .fa-magnifying-glass {
+                font-size: 14px;
+            }
+
+            .logobar h1 {
+                font-size: 25px;
+
+            }
+
+            .fa-heart {
+                font-size: 20px;
+            }
+
+            .fa-bag-shopping {
+                font-size: 20px;
+                padding: 0 12px 0 0;
+
+            }
+
+            .menu_bar {
+                width: 41em;
+                height: 3.em;
+            }
+
+            .menu_bar img {
+                width: 13em;
+            }
+
+            .menu_bar {
+                display: none;
+            }
+
+            .animation-part2 img {
+                width: 13em;
+            }
+
+            /* .home_dropdown4 {
+                width: 10em;
+                margin-left: -10em;
+            } */
+
+            .word h4 {
+                font-size: 18px;
+            }
+
+            .word h1 {
+                font-size: 45px;
+            }
+
+            .animation-part {
+                height: 30em;
+            }
+
+            .banner1 {
+                flex-direction: column;
+
+                justify-content: center;
+
+            }
+
+            .bottom {
+                flex-direction: column;
+            }
+
+            .watches {
+                width: 70%;
+                margin-bottom: 24px;
+            }
+
+            .watches img {
+                width: 26em;
+            }
+
+            .tws {
+                width: 100%;
+            }
+
+            .smartphone {
+                width: 100%;
+            }
+
+            .smart-product {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .tab-buttons {
+                flex-wrap: nowrap;
+                justify-content: center;
+                margin: 0;
+            }
+
+            .tab-button1 {
+                padding: 13px 13px;
+                margin: 0 12px 0 0;
+                width: 21%;
+            }
+
+            .tab-button2 {
+                width: 22%;
+            }
+
+            .tab-button3 {
+                width: 19%;
+                padding: 14px 30px;
+            }
+
+            .modern-smartphone {
+                width: 39%;
+            }
+
+            .Featured-products {
+                flex-direction: column;
+                gap: 58px;
+            }
+
+            .Featured-offer span {
+                font-size: 25px;
+            }
+
+            .watch-img {
+                width: 22em;
+            }
+
+            .headphones-shopnow-button {
+                width: 23%;
+            }
+
+            .line1 {
+                height: 24em;
+            }
+
+            .Featured-product1 {
+                height: 36em;
+                width: 100%;
+            }
+
+            .brands {
+                padding: 31px 52px;
+                gap: 26px;
+            }
+
+            /* .blog-button{
+                padding: 13px 31px;
+            } */
+            .hmart {
+                justify-content: center;
+            }
+
+            .blog1 span {
+                font-size: 25px;
+            }
+        }
+
+      
+    </style>
+
+</head>
+
+<body>
+    <div class="background">
+        <div class="navbar">
+            <h4>World Wide Completely Free Return and Shipping</h4>
+            <ul>
+                <li>
+                    <a href="#"><i class="fa-solid fa-phone"></i>&nbsp;+012 3456 789 &nbsp;</a>
+                    <p class="bar">|</p>&nbsp;&nbsp;
+                </li>
+                <li>
+                    <a href="#"><i class="fa-regular fa-envelope"></i>&nbsp;demo@example.com &nbsp;</a>
+                    <p class="bar">|</p>&nbsp;&nbsp;
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-user"></i>&nbsp;Account</a>
+                </li>
+            </ul>
+
+        </div>
+        <hr size="0.5px" />
+        <div class="logobar">
+            <div>
+                <h1 class="logo1">H<span>mart</span></h1>
+            </div>
+            <div class="searchbar">
+                <input type="text" class="search" placeholder="Search">
+                <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="icons">
+                <a href="#"> <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+
+        </div>
+
+        <div class="menu_bar">
+
+            <ul>
+                <li><a href="#">HOME&nbsp;<i class="fa-solid fa-angle-down"></i></a>
+                    <div class="home_dropdown">
+                        <ul>
+                            <li><a href="#">Home 1</a></li>
+                            <li><a href="#">Home 2</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PAGES&nbsp;<i class="fa-solid fa-angle-down"></i></a>
+                    <div class="home_dropdown2">
+                        <ul>
+                            <div class="inner">
+                                <h1>Inner pages</h1>
+                                <li><a href="#">404 error</a></li>
+                                <li><a href="#">Order tracking</a></li>
+                                <li><a href="#">FAQ page</a></li>
+                                <li><a href="#">Coming soon page</a></li>
+                            </div>
+                            <div class="other">
+                                <h1>Other shop pages</h1>
+                                <li><a href="#">Cart page</a></li>
+                                <li><a href="#">Checkout page</a></li>
+                                <li><a href="#">Compare page</a></li>
+                                <li><a href="#">Wishlist page</a></li>
+                            </div>
+                            <div class="related">
+                                <h1>Related shop pages</h1>
+                                <li><a href="#">Account page</a></li>
+                                <li><a href="#">Resgister & Log in page</a></li>
+                                <li><a href="#">Empty cart page</a></li>
+                                <li><a href="#">Thank you page</a></li>
+                            </div>
+                            <div class="img">
+                                <img src="img.jpg" alt="">
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">SHOP&nbsp;<i class="fa-solid fa-angle-down"></i></a>
+                    <div class="home_dropdown3">
+                        <ul>
+                            <div class="shop_page">
+                                <h1>Shop Page</h1>
+                                <li><a href="#">Shop 3 Column</a></li>
+                                <li><a href="#">Shop 4 Column</a></li>
+                                <li><a href="#">Shop left Sidebar</a></li>
+                                <li><a href="#">Shop Right Sidebar</a></li>
+                                <li><a href="#">Shop List Left sidebar</a></li>
+                                <li><a href="#">Shop List Right sidebar</a></li>
+                            </div>
+
+                            <div class="product">
+                                <h1>Product Details Page</h1>
+                                <li><a href="#">Product Single</a></li>
+                                <li><a href="#">Product Variable</a></li>
+                                <li><a href="#">Product Affiliate</a></li>
+                                <li><a href="#">Product Group</a></li>
+                                <li><a href="#">Product Tab 2</a></li>
+                                <li><a href="#">Product Tab 3</a></li>
+
+                            </div>
+
+                            <div class="single">
+                                <h1>Single Product Page</h1>
+                                <li><a href="#">Product Slider</a></li>
+                                <li><a href="#">Product Gallery Left </a></li>
+                                <li><a href="#">Product Gallery Right</a></li>
+                                <li><a href="#">Product Sticky Left</a></li>
+                                <li><a href="#">Product Sticky Right</a></li>
+                                <li><a href="#">Cart Page</a></li>
+
+                            </div>
+
+                            <div class="single2">
+                                <h1>Single Product Page</h1>
+                                <li><a href="#">Checkout Page</a></li>
+                                <li><a href="#">Compare Page</a></li>
+                                <li><a href="#">Wishlist Page</a></li>
+                                <li><a href="#">Account Page</a></li>
+                                <li><a href="#">Login & Register Page</a></li>
+                                <li><a href="#">Empty Cart Page</a></li>
+
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">BLOG&nbsp;<i class="fa-solid fa-angle-down"></i></a>
+                    <div class="home_dropdown4">
+                        <ul>
+                            <div class="grid">
+                                <li><a href="#">Blog Grid<i class="fa-solid fa-angle-right"></i></a></li>
+                                <li><a href="#">Blog List<i class="fa-solid fa-angle-right"></i></a></li>
+                                <li><a href="#">Single Blog<i class="fa-solid fa-angle-right"></i></a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="animation-part">
+
+        <div class="animation-part1">
+            <div class="word">
+                <h4>Welcome To Hmart</h>
+                    <p class="word2">
+                    <h1>Your Home</h1>
+                    <h1>Smart Devices &</h1>
+                    <h1>Best Solution</h1>
+                    </p>
+                    <div>
+                        <a href="#"><button class="shop-devices">Shop All Devices</button></a>
+                    </div>
+            </div>
+
+
+            <div class="animation-part2">
+                <img src="img2.png">
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="banner1">
+        <div class="watches">
+            <img src="watches2.png">
+            <p>Smart Watch For</p>
+            <p>Your Hand</p>
+            <h2>From $29.00</h2>
+        </div>
+        <div class="both">
+            <div class="tws">
+                <div class="tws-text">
+                    <h3>Headphones</h3>
+                    <span>From $95.00</span>
+                </div>
+                <img src="tws3-removebg-preview.png">
+            </div>
+
+            <div class="smartphone">
+                <div class="smartphones-text">
+                    <p>Smartphones</p>
+                    <h2>From $69.00</h2>
+                </div>
+                <img src="smartphone3.png">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <div class="product-area">
+            <div class="tab-buttons">
+                <div class="tab-button1">New Arrivals</div>
+                <div class="tab-button2">Top Rated</div>
+                <div class="tab-button3">Featured</div>
+            </div>
+            <div class="products-8">
+                <div class="modern-smartphone">
+                    <div><img src="product1-removebg-preview.png"></div>
+                    <div class="modern-smartphone-text1">Accessories</div>
+                    <div class="modern-smartphone-text2">Modern Smartphone</div>
+                    <div class="modern-smartphone-text3">$38.50</div>
+
+                </div>
+                <div class="modern-smartphone">
+                    <div><img src="product2-removebg-preview.png"></div>
+                    <div class="modern-smartphone-text1">Accessories</div>
+                    <div class="modern-smartphone-text2">Modern Smartphone</div>
+                    <div class="modern-smartphone-text3">$38.50</div>
+
+                </div>
+                <div class="modern-smartphone">
+                    <div><img src="product3-removebg-preview.png"></div>
+                    <div class="modern-smartphone-text1">Accessories</div>
+                    <div class="modern-smartphone-text2">Modern Smartphone</div>
+                    <div class="modern-smartphone-text3">$38.50</div>
+
+                </div>
+                <div class="modern-smartphone">
+                    <div><img src="product4-removebg-preview.png"></div>
+                    <div class="modern-smartphone-text1">Accessories</div>
+                    <div class="modern-smartphone-text2">Modern Smartphone</div>
+                    <div class="modern-smartphone-text3">$38.50</div>
+
+                </div>
+                <div class="modern-smartphone">
+                    <div><img src="product5-removebg-preview.png"></div>
+                    <div class="modern-smartphone-text1">Accessories</div>
+                    <div class="modern-smartphone-text2">Modern Smartphone</div>
+                    <div class="modern-smartphone-text3">$38.50</div>
+
+                </div>
+                <div class="modern-smartphone">
+                    <div><img src="product6-removebg-preview.png"></div>
+                    <div class="modern-smartphone-text1">Accessories</div>
+                    <div class="modern-smartphone-text2">Modern Smartphone</div>
+                    <div class="modern-smartphone-text3">$38.50</div>
+
+                </div>
+                <div class="modern-smartphone">
+                    <div><img src="product7-removebg-preview.png"></div>
+                    <div class="modern-smartphone-text1">Accessories</div>
+                    <div class="modern-smartphone-text2">Modern Smartphone</div>
+                    <div class="modern-smartphone-text3">$38.50</div>
+
+                </div>
+                <div class="modern-smartphone">
+                    <div><img src="product8-removebg-preview.png"></div>
+                    <div class="modern-smartphone-text1">Accessories</div>
+                    <div class="modern-smartphone-text2">Modern Smartphone</div>
+                    <div class="modern-smartphone-text3">$38.50</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="fashion">
+        <div class="content">
+            <h1>Smart Fashion</h1>
+
+            <p>With Smart Devices</p>
+
+        </div>
+        <div>
+            <a href="#"><button class="button-shop">Shop All Devices</button></a>
+        </div>
+    </div>
+
+    <!-- <div class="Featured"> -->
+    <div class="Featured-offer">
+        <h1>Featured Offers</h1>
+        <span>There are many variations of passages of Lorem Ipsum available</span>
+        <div class="Featured-products">
+            <div class="Featured-product1">
+                <div class="headphones-text">
+                    <h2>Bluetooth Headphones</h2>
+                    <p><del>$48.50</del>-$38.50</p>
+
+                </div>
+                <div class="Featured-product1-img">
+                    <img src="headphone-removebg-preview.png">
+                </div>
+                <div class="headphones-shopnow-button">
+                    <p>Shop Now</p>
+
+                </div>
+
+            </div>
+            <div class="watch-phone">
+                <div class="Featured-product2">
+                    <div class="watch-img">
+                        <img src="watch3-removebg-preview.png">
+                    </div>
+
+                    <hr class="line1" size="0.5">
+                    <div class="watch-text">
+                        <div>
+                            <h3>Ladies smartwatch</h3>
+                            <p><del>$48.50</del>-$38.50</p>
+                        </div>
+                        <div class="features">
+                            <ul>
+                                <li>Predecessor: None</li>
+                                <li>Support Type: Neutral.</li>
+                                <li>Cushioning : High Energizing</li>
+                                <li>Total Weight : 300gm</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="Featured-product3">
+                    <div class="phone-img">
+                        <img src="phone-offer-removebg-preview.png">
+                    </div>
+                    <hr class="line1" size="0.5">
+                    <div class="phone-text">
+                        <div>
+                            <h4>Smartphone</h4>
+                            <p><del>$48.50</del>-$38.50</p>
+                        </div>
+                        <div class="features">
+                            <ul>
+                                <li>Predecessor: None</li>
+                                <li>Support Type: Neutral.</li>
+                                <li>Cushioning : High Energizing</li>
+                                <li>Total Weight : 300gm</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner4">
+        <div class="feedback">
+            <h1>Client Feedback</h1>
+            <span class="passages">There are many variations of passages of Lorem Ipsum available</span>
+            <div class="part1">
+                <div class="quotes">
+                    <img src="double-quotes2-removebg-preview.png">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum</p>
+
+                    <p>assumenda distinctio eligendi ipsa, harum magnam tempora sequi, </p>
+
+                    <p>voluptas odio amet iure. Labore! </p>
+
+
+                    <div class="client">
+                        <div class="client-img">
+                            <img src="client-img2.png">
+                        </div>
+                        <div>
+                            <h3>Regan Rosen</h3>
+                            <span class="client-span">Client</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="quotes">
+                    <img src="double-quotes2-removebg-preview.png">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum</p>
+
+                    <p>assumenda distinctio eligendi ipsa, harum magnam tempora sequi,</p>
+
+                    <p>voluptas odio amet iure. Labore!</p>
+
+
+                    <div class="client">
+                        <div class="client-img">
+                            <img src="client-img2.png">
+                        </div>
+                        <div>
+                            <h3>Regan Rosen</h3>
+                            <span>Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-brand">
+        <div class="brands">
+            <div id="brand1">
+                <span><img src="brand1-removebg-preview.png"></span>
+            </div>
+            <div class="brand2">
+                <span><img src="brand2-removebg-preview.png"></span>
+            </div>
+            <div>
+                <span><img src="barnd3-removebg-preview.png"></span>
+            </div>
+            <div>
+                <span><img src="brand4-removebg-preview.png"></span>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="smart-product">
+        <div class="blog1">
+            <h1>Latest Blog</h1>
+            <span>There are many variations of passages of Lorem Ipsum available</span>
+            <div class="smart-product">
+                <div class="smart">
+                    <div class="smart-product1-img">
+                        <img src="smart-product1.webp">
+                    </div>
+                    <div class="blog-text">
+                        <div class="blog-icons">
+                            <p><i class="fa-regular fa-calendar-days"></i>&nbsp;20,JUN 2030&nbsp;
+                                <i class="fa-solid fa-user-large"></i>&nbsp;Wild Nick&nbsp;
+                            </p>
+                        </div>
+                        <div class="blog-heading">
+                            <h2>10 Quick Tips About Smart Product</h2>
+                        </div>
+                        <div class="blog-lorem">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, voluptates? Dolorum
+                                rem
+                                cupiditate nemo deserunt.</p>
+                        </div>
+
+                        <div class="blog-button">
+                            <p>Read More</p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="smart">
+                    <div class="smart-product1-img">
+                        <img src="smart-product2.webp">
+                    </div>
+                    <div class="blog-text">
+                        <div class="blog-icons">
+                            <p><i class="fa-regular fa-calendar-days"></i>&nbsp;20,JUN 2030&nbsp;
+                                <i class="fa-solid fa-user-large"></i>&nbsp;Oaklee Odom&nbsp;
+                            </p>
+                        </div>
+                        <div class="blog-heading">
+                            <h2>5 Real-Life Lessons About Smart Product</h2>
+                        </div>
+                        <div class="blog-lorem">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, voluptates? Dolorum
+                                rem
+                                cupiditate nemo deserunt.</p>
+                        </div>
+
+                        <div class="blog-button">
+                            <p>Read More</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <div class="bottom">
+        <div class="hmart">
+            <h2 class="logo2">H<span>mart</span></h2>
+            <p> Lorem ipsum, dolor sit amet consectetur </p>
+            <p>adipisicing elit. Deserunt sed quos incidunt, </p>
+            <p> tempora officia impedit.</p>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-tumblr"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <div class="services">
+            <h1>Services</h1>
+            <a href="#">
+                <p>My Account</p>
+            </a>
+            <a href="#">
+                <p>Contact</p>
+            </a>
+            <a href="#">
+                <p>Shopping Cart</p>
+            </a>
+            <a href="#">
+                <p>Shop</p>
+            </a>
+            <a href="#">
+                <p>Service Login</p>
+            </a>
+        </div>
+
+        <div class="My Account">
+            <h1>My Account</h1>
+            <a href="#">
+                <p>My Account</p>
+            </a>
+
+            <a href="#">
+                <p>Contact</p>
+            </a>
+
+            <a href="#">
+                <p>Shopping Cart</p>
+            </a>
+
+            <a href="#">
+                <p>Shop</p>
+            </a>
+
+            <a href="#">
+                <p>Service Login</p>
+            </a>
+        </div>
+
+        <div class="contact">
+            <h1>Contact Info</h1>
+
+            <p>Address: Your Address Goes Here.</p>
+
+            <p>Phone/Fax: <a href="#">0123456789</p></a>
+
+            <p>Email: <a href="#">demo@example.com</p></a>
+
+            <a href="#">
+                <p>demo@example.com</p>
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div>
+            <p><i class="fa-regular fa-copyright"></i>&nbsp;2022&nbsp;Hmart Made With&nbsp;By <a
+                    href="#">Codecarnival.</a>
+            </p>
+        </div>
+        <div>
+            <a href="#"><img src="payment.webp"></a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
